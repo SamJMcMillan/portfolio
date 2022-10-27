@@ -1,0 +1,36 @@
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid $color-primary;
+  @include media-query(medium) {
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 2px solid $color-primary;
+    max-width: 200px;
+  }
+}
+
+.logo-container {
+  max-width: 75px;
+  @include media-query(medium) {
+    display: flex;
+    max-width: 150px;
+    justify-content: center;
+  }
+}
+
+.hamburger-wrap {
+  margin: 10px;
+  @include media-query(medium) {
+    display: none;
+  }
+}
+
+.navigation-list ul {
+  display: none;
+  @include media-query(medium) {
+    display: flex;
+    flex-direction: column;
+  }
+}
