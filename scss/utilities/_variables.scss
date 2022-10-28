@@ -1,9 +1,14 @@
 // -- Variables ---------- //
 
 // -- Colors ------------- //
-$color-primary: #8b0000;
+$color-primary: black;
 $color-secondary: #47a8a0;
 $font-color: #f2f2f2;
+
+// -- Font --------------- //
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Source+Serif+4:ital,opsz@0,8..60;1,8..60&display=swap");
+$font-primary: "Montserrat", sans-serif;
+$font-heading: "font-family: 'DM Serif Display', serif;";
 
 // -- Breakpoints -------- //
 $bpoint-sm: 576px;

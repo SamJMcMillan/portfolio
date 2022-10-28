@@ -1,3 +1,13 @@
+// -- Buttons and Links ---- //
+@mixin hyperlink-style {
+  text-decoration: underline 2px rgba(0, 0, 0, 0);
+  transition: text-decoration-color 300ms;
+  &:hover,
+  &:focus {
+    text-decoration-color: rgba(0, 0, 0, 1);
+  }
+}
+
 // -- Media Query ---------- //
 @mixin media-query($break) {
   @if $break == "small" {

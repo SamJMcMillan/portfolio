@@ -1,4 +1,6 @@
 body {
+  background-color: $font-color;
+  font-family: $font-primary;
   &::before,
   &::after {
     box-sizing: border-box;
@@ -6,5 +8,13 @@ body {
 }
 
 main {
-  text-align: center;
+  @include media-query("medium") {
+    margin-left: 25%;
+  }
+  @include media-query("large") {
+    margin-left: 20%;
+  }
+  @include media-query("x-large") {
+    margin-left: 15%;
+  }
 }

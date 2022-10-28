@@ -1,1 +1,122 @@
 // -- Hero Image ---------- //
+.hero-wrapper {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.1),
+      rgb(58, 53, 70)
+    ),
+    url("../../images/hero-image-tex.jpeg");
+  display: flex;
+  flex-direction: column;
+  padding: 200px 60px 0px;
+  color: $font-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-size: cover;
+  border-bottom: 5px solid $color-primary;
+  text-align: center;
+  @include media-query("large") {
+  }
+}
+
+header .title {
+  font-family: $font-heading;
+  margin-bottom: 150px;
+  align-self: center;
+  padding: 10px;
+  font-size: larger;
+  border: 2px solid $font-color;
+  background-color: rgba(0, 0, 0, 0.5);
+  h1 {
+    margin-bottom: 20px;
+  }
+  @include media-query("large") {
+    font-size: x-large;
+    margin-bottom: 300px;
+    max-width: 500px;
+    padding: 75px 100px;
+  }
+}
+
+header .scroll-instruct {
+  margin-bottom: 15px;
+  @include media-query("large") {
+    margin-bottom: 30px;
+  }
+}
+
+// -- Project Cards ------- //
+
+#project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  padding: 50px;
+  border: 2px;
+  i {
+    margin-left: 5px;
+    font-size: smaller;
+  }
+  .card-image {
+    max-width: 70vw;
+    border: 2px solid $color-primary;
+    @include media-query(large) {
+      max-width: 30vw;
+    }
+    @include media-query(x-large) {
+      max-width: 20vw;
+    }
+  }
+  .card-title {
+    h2 {
+      font-family: $font-heading;
+      text-transform: uppercase;
+      font-size: larger;
+    }
+    h5 {
+      font-size: smaller;
+      a {
+        @include hyperlink-style;
+      }
+    }
+    margin-top: 20px;
+    line-height: 25px;
+  }
+}
+
+// -- Contact Form -------- //
+
+.form-wrapper {
+  color: $font-color;
+  background-image: linear-gradient(
+      to top,
+      rgba(245, 246, 252, 0.1),
+      rgb(58, 53, 70)
+    ),
+    url("../../images/hero-image-tex.jpeg");
+  border-top: 5px solid black;
+  padding: 50px;
+  .form-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 2px solid $font-color;
+    background-color: rgba(0, 0, 0, 0.5);
+    .form-info {
+      max-width: 35%;
+      .top-para {
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-family: $font-heading;
+        font-size: x-large;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
