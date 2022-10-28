@@ -98,25 +98,85 @@ header .scroll-instruct {
     ),
     url("../../images/hero-image-tex.jpeg");
   border-top: 5px solid black;
-  padding: 50px;
+  padding: 20px;
   .form-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 10px;
-    border: 2px solid $font-color;
-    background-color: rgba(0, 0, 0, 0.5);
-    .form-info {
-      max-width: 35%;
-      .top-para {
-        margin-bottom: 20px;
+    display: none;
+    @include media-query(small) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      border: 2px solid $font-color;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      .form-info {
+        max-width: 100%;
+        text-align: center;
+        .top-para {
+          margin-bottom: 20px;
+        }
+        h2 {
+          font-family: $font-heading;
+          font-size: x-large;
+          text-transform: uppercase;
+          margin-bottom: 5px;
+        }
+        @include media-query(large) {
+          width: 45%;
+          text-align: start;
+        }
       }
-      h2 {
-        font-family: $font-heading;
-        font-size: x-large;
-        text-transform: uppercase;
-        margin-bottom: 5px;
+      .contact-form {
+        margin-top: 20px;
+        align-items: center;
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          input,
+          textarea {
+            padding: 10px;
+            margin: 2px;
+            border: 2px solid $color-primary;
+            background-color: $font-color;
+            color: black;
+          }
+          .name {
+            display: inline;
+            width: calc(50% - 5px);
+          }
+          .email,
+          .subject,
+          .message {
+            width: 100%;
+          }
+          .message {
+            min-height: 100px;
+          }
+          button {
+            margin-top: 10px;
+            padding: 15px 40px;
+            background-color: black;
+            font-family: $font-heading;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+        @include media-query(large) {
+          margin-left: 10%;
+          width: 45%;
+        }
+      }
+      @include media-query(large) {
+        justify-content: start;
+        padding: 30px 50px;
       }
     }
+  }
+  .back-top {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }

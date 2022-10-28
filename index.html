@@ -39,7 +39,7 @@
     <!-- /Sidebar Navigation -->
     <main>
       <!-- Hero Image -->
-      <header>
+      <header id="top">
         <div class="hero-wrapper">
           <div class="title">
             <h1>My Name is Sam McMillan</h1>
@@ -176,9 +176,17 @@
           </div>
           <div class="contact-form">
             <form>
-              <input type="type" placeholder="First Name" />
+              <input type="type" placeholder="First Name*" class="name" />
+              <input type="type" placeholder="Last Name*" class="name" />
+              <input type="email" placeholder="Email Address" class="email" />
+              <input type="type" placeholder="Subject" class="subject" />
+              <textarea placeholder="Message" class="message"></textarea>
+              <button action="#top">Submit</button>
             </form>
           </div>
+        </div>
+        <div class="back-top">
+          <h3><i class="fa-solid fa-chevron-up"></i><br />Back to<br />top</h3>
         </div>
       </div>
     </main>
