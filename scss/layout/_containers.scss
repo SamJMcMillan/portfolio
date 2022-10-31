@@ -15,33 +15,18 @@
   background-size: cover;
   border-bottom: 5px solid $color-primary;
   text-align: center;
-  @include media-query("large") {
-  }
-}
-
-header .title {
-  font-family: $font-heading;
-  margin-bottom: 150px;
-  align-self: center;
-  padding: 10px;
-  font-size: larger;
-  border: 2px solid $font-color;
-  background-color: rgba(0, 0, 0, 0.5);
-  h1 {
-    margin-bottom: 20px;
-  }
-  @include media-query("large") {
-    font-size: x-large;
-    margin-bottom: 300px;
-    max-width: 500px;
-    padding: 75px 100px;
-  }
-}
-
-header .scroll-instruct {
-  margin-bottom: 15px;
-  @include media-query("large") {
-    margin-bottom: 30px;
+  .title {
+    @include hero-image-title;
+    margin-bottom: 150px;
+    padding: 10px;
+    h1 {
+      margin-bottom: 20px;
+    }
+    @include media-query("large") {
+      margin-bottom: 300px;
+      max-width: 500px;
+      padding: 75px 100px;
+    }
   }
 }
 
