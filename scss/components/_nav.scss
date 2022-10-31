@@ -6,12 +6,12 @@
   border-bottom: 5px solid $color-primary;
   @include media-query(medium) {
     justify-content: start;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     border-bottom: none;
     border-right: 5px solid $color-primary;
     max-width: 15%;
-    min-height: 200vh;
+    min-height: 100vh;
   }
   @include media-query("medium") {
     min-width: 25%;
