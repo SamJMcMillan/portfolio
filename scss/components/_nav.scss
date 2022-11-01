@@ -65,6 +65,11 @@
     }
     a {
       @include hyperlink-style;
+      padding: 3px;
+      &:active {
+        background-color: black;
+        color: $font-color;
+      }
     }
   }
 }
