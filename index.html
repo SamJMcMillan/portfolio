@@ -20,7 +20,12 @@
             <img src="images/logo.png" alt="Sam McMillan Logo" />
           </a>
         </div>
-        <div class="navigation-list">
+        <div class="hamburger-wrap">
+          <button class="hamburger" id="navButton" onclick="displayNav()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="navigation-list" id="navList">
           <ul>
             <li><a href="about.html">About Me</a></li>
             <li><a href="index.html#project-cards">My Portfolio</a></li>
@@ -31,8 +36,13 @@
             </li>
           </ul>
         </div>
-        <div class="hamburger-wrap">
-          <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/samjgamedev/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/SamJMcMillan">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
     </nav>
@@ -182,13 +192,15 @@
             </p>
           </div>
           <div class="contact-form">
-            <form>
+            <p id="name-popup">Please add your first and last name</p>
+            <p id="email-popup">Please add your email</p>
+            <form onsubmit="return validateForm()" method="post">
               <input type="type" placeholder="First Name*" class="name" />
               <input type="type" placeholder="Last Name*" class="name" />
               <input type="email" placeholder="Email Address" class="email" />
               <input type="type" placeholder="Subject" class="subject" />
               <textarea placeholder="Message" class="message"></textarea>
-              <button action="#top">Submit</button>
+              <button input type="submit" action="#top">Submit</button>
             </form>
           </div>
         </div>
@@ -206,6 +218,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="javascript/parallax.min.js"></script>
     <script src="javascript/header.js"></script>
+    <script src="javascript/contact-form.js"></script>
+    <script src="javascript/navigation.js"></script>
 
     <!-- JavaScript/jQuery -->
   </body>

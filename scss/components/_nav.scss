@@ -1,5 +1,6 @@
 .sidebar-wrapper {
   display: flex;
+  flex-flow: row wrap;
   max-width: 100vh;
   justify-content: space-between;
   background-color: $font-color;
@@ -39,29 +40,62 @@
   }
 }
 
+.socials {
+  text-align: center;
+  padding-top: 20px;
+  display: none;
+  @include media-query(medium) {
+    display: block;
+  }
+}
+
+.fa-brands {
+  margin: 15px;
+  font-size: x-large;
+}
+
 .hamburger-wrap {
   margin: 10px;
   @include media-query(medium) {
     display: none;
   }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .navigation-list {
+  flex-basis: 100%;
+  text-align: center;
   align-self: center;
   ul {
     font-family: $font-heading;
     line-height: 50px;
     text-transform: uppercase;
-    display: none;
+    border-top: 5px solid black;
+    @include media-query(medium);
+    border-top: none;
+    background-color: darken($font-color, $amount: 10);
+    li {
+      border-top: 2px solid black;
+      padding: 10px;
+      @include media-query(medium) {
+        border-top: none;
+        padding: 0px;
+      }
+    }
     @include media-query(medium) {
       display: flex;
       flex-direction: column;
+      background-color: $font-color;
     }
     .contact {
-      margin-top: 50px;
-      padding: 10px 0;
-      border-top: 2px solid $color-primary;
-      border-bottom: 2px solid $color-primary;
+      @include media-query(medium) {
+        padding: 10px 0;
+        margin-top: 50px;
+        border-top: 2px solid $color-primary;
+        border-bottom: 2px solid $color-primary;
+      }
     }
     a {
       @include hyperlink-style;
