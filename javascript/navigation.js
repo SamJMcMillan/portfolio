@@ -1,7 +1,17 @@
 const navLinks = document.getElementById("navList");
 const navBtn = document.getElementById("navButton");
 
-navLinks.style.display = "none";
+$(window).resize(function () {
+  if ($("body").width() < 768) {
+    navLinks.style.display = "none";
+  }
+});
+
+$(window).resize(function () {
+  if ($("body").width() >= 768) {
+    navLinks.style.display = "flex";
+  }
+});
 
 function displayNav() {
   if (navLinks.style.display === "none") {
