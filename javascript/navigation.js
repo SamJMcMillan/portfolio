@@ -1,6 +1,12 @@
 const navLinks = document.getElementById("navList");
 const navBtn = document.getElementById("navButton");
 
+$(window).ready(function () {
+  if ($("body").width() < 768) {
+    navLinks.style.display = "none";
+  }
+});
+
 $(window).resize(function () {
   if ($("body").width() < 768) {
     navLinks.style.display = "none";
