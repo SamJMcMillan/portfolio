@@ -14,25 +14,35 @@
   <body>
     <!-- Sidebar Navigation -->
     <nav>
-        <div class="sidebar-wrapper">
-          <div class="logo-container">
-            <a href="index.html">
-              <img src="images/logo.png" alt="Sam McMillan Logo" />
-            </a>
-          </div>
-          <div class="navigation-list">
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-              <li><a href="index.html#project-cards">My Portfolio</a></li>
-              <li><a href="examples.html">Coding Examples</a></li>
-              <li><a href="scheme.html">SCS Scheme</a></li>
-              <li class="contact">
-                <a href="index.html#form">Contact Me</a>
-              </li>
-            </ul>
+      <div class="sidebar-wrapper">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Sam McMillan Logo" />
+          </a>
         </div>
         <div class="hamburger-wrap">
-          <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+          <button class="hamburger" id="navButton" onclick="displayNav()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="navigation-list" id="navList">
+          <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="index.html#project-cards">My Portfolio</a></li>
+            <li><a href="examples.html">Coding Examples</a></li>
+            <li><a href="scheme.html">SCS Scheme</a></li>
+            <li class="contact">
+              <a href="index.html#form">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/samjgamedev/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/SamJMcMillan">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
     </nav>
@@ -56,6 +66,14 @@
       <!-- /Hero Image -->
       <div class="info-wrapper">
         <h1>Section Coming Soon</h1>
+      </div>
     </main>
+    <!-- JavaScript/jQuery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="javascript/header.js"></script>
+    <script src="javascript/navigation.js"></script>
+
+    <!-- JavaScript/jQuery -->
   </body>
 </html>

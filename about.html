@@ -20,7 +20,12 @@
             <img src="images/logo.png" alt="Sam McMillan Logo" />
           </a>
         </div>
-        <div class="navigation-list">
+        <div class="hamburger-wrap">
+          <button class="hamburger" id="navButton" onclick="displayNav()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="navigation-list" id="navList">
           <ul>
             <li><a href="about.html">About Me</a></li>
             <li><a href="index.html#project-cards">My Portfolio</a></li>
@@ -31,8 +36,13 @@
             </li>
           </ul>
         </div>
-        <div class="hamburger-wrap">
-          <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/samjgamedev/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/SamJMcMillan">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
     </nav>
@@ -58,7 +68,7 @@
       <div class="info-wrapper">
         <h2>About Sam</h2>
         <div class="about-wrap">
-          <p class="about-para">
+          <p class="about-para mySlides">
             <strong
               >Hi, I'm a graduate of Computer Games Design, looking towards a
               career in web development</strong
@@ -79,14 +89,35 @@
             oriented programming muscles in alternative sectors to my work life.
             I also practice 3D Modelling using Blender as a hobby.
           </p>
+          <ul class="about-para mySlides">
+            <li class="skills-title">My Skills: <br /></li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+          </ul>
+
           <img
             src="images/sam.jpg"
             alt="A picture of Sam McMillan"
             class="sam"
           />
         </div>
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
       </div>
       <!-- /Info -->
     </main>
+    <!-- JavaScript/jQuery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="javascript/header.js"></script>
+    <script src="javascript/navigation.js"></script>
+    <script src="javascript/about-slideshow.js"></script>
+
+    <!-- JavaScript/jQuery -->
   </body>
 </html>

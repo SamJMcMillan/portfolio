@@ -20,7 +20,12 @@
             <img src="images/logo.png" alt="Sam McMillan Logo" />
           </a>
         </div>
-        <div class="navigation-list">
+        <div class="hamburger-wrap">
+          <button class="hamburger" id="navButton" onclick="displayNav()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="navigation-list" id="navList">
           <ul>
             <li><a href="about.html">About Me</a></li>
             <li><a href="index.html#project-cards">My Portfolio</a></li>
@@ -31,8 +36,13 @@
             </li>
           </ul>
         </div>
-        <div class="hamburger-wrap">
-          <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/samjgamedev/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/SamJMcMillan">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
     </nav>
@@ -55,23 +65,35 @@
       </header>
       <!-- /Hero Image -->
       <div class="info-wrapper">
-        <p class="about-para">
-          The Scion Coalition Scheme is an intensive, specially tailored
-          training program run by Netmatters in order to give willing candidates
-          the opportunity to enter the industry as web developers. Under the
-          supervision of senior web developers, scions generally aim to complete
-          training within six to nine months. The course is intensive and
-          therefore the level of learning achieved is extensive in a short space
-          of time.
-        </p>
-        <h2>Treehouse</h2>
-        <p class="about-para">
-          Treehouse is an online learning community, featuring videos covering a
-          number of topics from basic HTML to C# programming, iOS development,
-          data analysis, and more. By completing courses users can earn points,
-          allowing them to track their progress and see how much they?ve covered
-          in certain areas. Total Score
-        </p>
+        <div>
+          <p class="about-para">
+            The Scion Coalition Scheme is an intensive, specially tailored
+            training program run by Netmatters in order to give willing
+            candidates the opportunity to enter the industry as web developers.
+            Under the supervision of senior web developers, scions generally aim
+            to complete training within six to nine months. The course is
+            intensive and therefore the level of learning achieved is extensive
+            in a short space of time.
+          </p>
+          <form
+            action="https://www.netmatters.co.uk/train-for-a-career-in-tech"
+          >
+            <input type="submit" class="scheme-btn" value="Learn More" />
+          </form>
+        </div>
+        <div>
+          <h2>Treehouse</h2>
+          <p class="about-para">
+            Treehouse is an online learning community, featuring videos covering
+            a number of topics from basic HTML to C# programming, iOS
+            development, data analysis, and more. By completing courses users
+            can earn points, allowing them to track their progress and see how
+            much they've covered in certain areas.
+          </p>
+          <form action="https://teamtreehouse.com/profiles/sammcmillan3">
+            <input type="submit" class="scheme-btn" value="See My Progress" />
+          </form>
+        </div>
         <h2>About Netmatters</h2>
         <ul>
           <li>Established in 2008</li>
@@ -87,5 +109,12 @@
         </ul>
       </div>
     </main>
+    <!-- JavaScript/jQuery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="javascript/header.js"></script>
+    <script src="javascript/navigation.js"></script>
+
+    <!-- JavaScript/jQuery -->
   </body>
 </html>
