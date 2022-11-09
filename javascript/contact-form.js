@@ -8,8 +8,9 @@ function validateForm() {
   let firstNameInput = $(".first-name").val().trim();
   let lastNameInput = $(".last-name").val().trim();
   let emailInput = $(".email").val().trim();
+  var namePattern = /^[A-Za-z\s]+$/;
   var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  if (firstNameInput.length === 0) {
+  if (!namePattern.test(firstNameInput)) {
     $(namePopup).slideDown(400).delay(2000).slideUp(400);
     return false;
   } else {
@@ -24,7 +25,7 @@ function validateForm() {
   if (emailInput.length === 0) {
     $(emailPopup).slideDown(400).delay(2000).slideUp(400);
     return false;
-  } else if (emailPattern.test(emailInput) == false) {
+  } else if (!emailPattern.test(emailInput)) {
     $(emailPopup).slideDown(400).delay(2000).slideUp(400);
     return false;
   } else {
