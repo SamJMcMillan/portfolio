@@ -8,6 +8,11 @@ body {
 }
 
 main {
+  background-image: url("../images/hero-image-tex.jpeg");
+  background-repeat: repeat-y;
+  background-position: 20% 0;
+  transition: 0s linear;
+  transition-property: background-position;
   @include media-query("medium") {
     margin-left: 25%;
   }

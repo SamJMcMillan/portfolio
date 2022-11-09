@@ -1,6 +1,8 @@
 // -- About Me ---------- //
 .info-wrapper {
-  margin: 20px;
+  background-color: $font-color;
+  margin: 0px;
+  padding: 20px;
   padding-bottom: 30px;
   border-bottom: 2px solid black;
   h1 {
@@ -50,7 +52,8 @@
     }
   }
   @include media-query(medium) {
-    margin: 80px 80px 150px;
+    padding: 30px;
+    margin-bottom: 50px;
   }
 }
 
