@@ -5,10 +5,17 @@ namePopup.style.display = "none";
 emailPopup.style.display = "none";
 
 function validateForm() {
-  let nameInput = $(".name").val().trim();
+  let firstNameInput = $(".first-name").val().trim();
+  let lastNameInput = $(".last-name").val().trim();
   let emailInput = $(".email").val().trim();
   var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  if (nameInput.length === 0) {
+  if (firstNameInput.length === 0) {
+    $(namePopup).slideDown(400).delay(2000).slideUp(400);
+    return false;
+  } else {
+    console.log("names entered");
+  }
+  if (lastNameInput.length === 0) {
     $(namePopup).slideDown(400).delay(2000).slideUp(400);
     return false;
   } else {
