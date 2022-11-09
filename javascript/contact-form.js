@@ -16,7 +16,7 @@ function validateForm() {
   } else {
     console.log("names entered");
   }
-  if (lastNameInput.length === 0) {
+  if (!namePattern.test(lastNameInput)) {
     $(namePopup).slideDown(400).delay(2000).slideUp(400);
     return false;
   } else {

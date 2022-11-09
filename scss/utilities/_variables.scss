@@ -15,3 +15,8 @@ $bpoint-sm: 576px;
 $bpoint-md: 768px;
 $bpoint-lg: 992px;
 $bpoint-xl: 1200px;
+
+// -- Rolling Text ------ //
+$delay: 0.015s;
+$duration: 0.6s;
+$easing: cubic-bezier(0.76, 0, 0.24, 1);
