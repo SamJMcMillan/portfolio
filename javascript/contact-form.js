@@ -22,10 +22,7 @@ function validateForm() {
   } else {
     console.log("names entered");
   }
-  if (emailInput.length === 0) {
-    $(emailPopup).slideDown(400).delay(2000).slideUp(400);
-    return false;
-  } else if (!emailPattern.test(emailInput)) {
+  if (!emailPattern.test(emailInput)) {
     $(emailPopup).slideDown(400).delay(2000).slideUp(400);
     return false;
   } else {

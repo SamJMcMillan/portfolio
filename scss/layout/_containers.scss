@@ -183,7 +183,8 @@
             transition: 0.3s;
           }
         }
-        .name {
+        .first-name,
+        .last-name {
           width: 100%;
           @include media-query(small) {
             display: inline;

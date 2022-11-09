@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/hamburgers.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/65566a4b6d.js"
       crossorigin="anonymous"
@@ -73,7 +77,81 @@
       </header>
       <!-- /Hero Image -->
       <div class="info-wrapper">
-        <h1>Section Coming Soon</h1>
+        <h1>Parallax</h1>
+        <p>
+          The parallax used for the background image of this website uses a
+          short JS script in tandem with some CSS tricks.
+        </p>
+        <div class="code-snippet">
+          <pre><code>
+            main {
+              background-image: url("../images/hero-image-tex.jpeg");
+              background-repeat: repeat-y;
+              background-position: 20% 0;
+              transition: 0s linear;
+              transition-property: background-position;
+            }
+        </code></pre>
+        </div>
+        <p>
+          The CSS above prepares the background image, allows it to loop
+          vertically and sets up the transition properties to be used in the
+          JavaScript
+        </p>
+        <div class="code-snippet">
+          <pre><code>
+            $(window).scroll(function () {
+              $("main").css("background-position", "20% " + 
+              $(this).scrollTop() / 2 + "px");
+            });
+        </code></pre>
+        </div>
+        <p>
+          This JavaScript snippet then fires a function on scroll, that
+          translates the background image upwards, creating the parallax effect.
+        </p>
+        <h1>Form Validation</h1>
+        <p>
+          The importance of Regex and the test() method are essential parts of
+          keeping form data clean. The code snippet below is used with the
+          contact form on the homepage, to ensure that all data being inputted
+          by the user is valid.
+        </p>
+        <div class="code-snippet">
+          <pre><code>
+            function validateForm() {
+              let firstNameInput = $(".first-name").val().trim();
+              let lastNameInput = $(".last-name").val().trim();
+              let emailInput = $(".email").val().trim();
+              var namePattern = /^[A-Za-z\s]+$/;
+              var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+              if (!namePattern.test(firstNameInput)) {
+                $(namePopup).slideDown(400).delay(2000).slideUp(400);
+                return false;
+              } else {
+                console.log("names entered");
+              }
+              if (!namePattern.test(lastNameInput)) {
+                $(namePopup).slideDown(400).delay(2000).slideUp(400);
+                return false;
+              } else {
+                console.log("names entered");
+              }
+              if (!emailPattern.test(emailInput)) {
+                $(emailPopup).slideDown(400).delay(2000).slideUp(400);
+                return false;
+              } else {
+                console.log("email entered");
+              }
+            }
+          </code></pre>
+        </div>
+        <p>
+          In the 'namePattern' and 'emailPattern' variables are patterns used to
+          discern the validity of the first names, last names and emails input
+          into the contact form. The test() method used in the 'if' statements
+          then tests the input from the contact form against the regex patterns.
+        </p>
       </div>
     </main>
     <!-- JavaScript/jQuery -->
@@ -81,6 +159,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="javascript/header.js"></script>
     <script src="javascript/navigation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
 
     <!-- JavaScript/jQuery -->
   </body>
