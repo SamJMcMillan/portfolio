@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Sam McMillan" />
+    <meta
+      name="keywords"
+      content="html, css, javascript, scss,
+    portfolio, web designer suffolk, web designer lowestoft, web design, front-end, full-stack"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/hamburgers.css" />
@@ -45,10 +51,10 @@
           </ul>
         </div>
         <div class="socials">
-          <a href="https://www.linkedin.com/in/samjgamedev/">
+          <a href="https://www.linkedin.com/in/samjgamedev/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://github.com/SamJMcMillan">
+          <a href="https://github.com/SamJMcMillan" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
@@ -63,16 +69,18 @@
             <h1 class="rolling-text">SCS Scheme</h1>
           </div>
           <div class="scroll-instruct">
-            <p>
-              Scroll<br />
-              Down<br />
-              <i class="fa-solid fa-chevron-down"></i>
-            </p>
+            <a href="#info">
+              <p>
+                Scroll<br />
+                Down<br />
+                <i class="fa-solid fa-chevron-down"></i>
+              </p>
+            </a>
           </div>
         </div>
       </header>
       <!-- /Hero Image -->
-      <div class="info-wrapper">
+      <div class="info-wrapper" id="info">
         <div>
           <p class="about-para">
             The Scion Coalition Scheme is an intensive, specially tailored
@@ -83,11 +91,12 @@
             intensive and therefore the level of learning achieved is extensive
             in a short space of time.
           </p>
-          <form
-            action="https://www.netmatters.co.uk/train-for-a-career-in-tech"
+          <a
+            class="scheme-btn"
+            href="https://www.netmatters.co.uk/train-for-a-career-in-tech"
+            target="_blank"
+            >Learn More</a
           >
-            <input type="submit" class="scheme-btn" value="Learn More" />
-          </form>
         </div>
         <div>
           <h2>Treehouse</h2>
@@ -98,9 +107,13 @@
             can earn points, allowing them to track their progress and see how
             much they've covered in certain areas.
           </p>
-          <form action="https://teamtreehouse.com/profiles/sammcmillan3">
-            <input type="submit" class="scheme-btn" value="See My Progress" />
-          </form>
+          <a
+            href="https://teamtreehouse.com/profiles/sammcmillan3"
+            class="scheme-btn"
+            target="_blank"
+          >
+            See My Progress
+          </a>
         </div>
         <h2>About Netmatters</h2>
         <ul>

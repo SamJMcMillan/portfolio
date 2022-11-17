@@ -94,8 +94,11 @@
     font-size: smaller;
   }
   .card-image {
-    max-width: 70vw;
+    max-width: 90vw;
     border: 2px solid $color-primary;
+    @include media-query(medium) {
+      max-width: 60vw;
+    }
     @include media-query(large) {
       max-width: 30vw;
     }
@@ -104,10 +107,15 @@
     }
   }
   .card-para {
-    max-width: 70vw;
+    font-size: larger;
+    max-width: 90vw;
     margin-top: 5px;
+    @include media-query(medium) {
+      max-width: 60vw;
+    }
     @include media-query(large) {
       max-width: 30vw;
+      font-size: medium;
     }
     @include media-query(x-large) {
       max-width: 20vw;
@@ -250,5 +258,6 @@
     text-shadow: 1px 1px black;
     font-weight: 700;
     text-transform: uppercase;
+    scroll-behavior: smooth;
   }
 }
