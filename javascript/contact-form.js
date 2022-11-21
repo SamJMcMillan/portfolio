@@ -1,8 +1,10 @@
 const namePopup = document.getElementById("name-popup");
 const emailPopup = document.getElementById("email-popup");
+const emailConfirmed = document.getElementById("email-confirmed");
 
 namePopup.style.display = "none";
 emailPopup.style.display = "none";
+emailConfirmed.style.display = "none";
 
 function validateForm() {
   let firstNameInput = $(".first-name").val().trim();
@@ -26,6 +28,7 @@ function validateForm() {
     $(emailPopup).slideDown(400).delay(2000).slideUp(400);
     return false;
   } else {
+    $(emailConfirmed).slideDown(400).delay(2000).slideUp(400);
     console.log("email entered");
   }
 }

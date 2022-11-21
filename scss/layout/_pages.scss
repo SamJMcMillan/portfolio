@@ -63,10 +63,30 @@
     display: inline;
     padding-left: 30px;
   }
+  @include media-query("x-large") {
+    min-width: 750px;
+  }
 }
 
 .mySlides {
   display: none;
+}
+
+.pagination {
+  align-self: center;
+  font-size: larger;
+  color: gray;
+  padding: 0 20px;
+  display: none;
+  &:hover {
+    cursor: pointer;
+  }
+  @include media-query("medium") {
+    display: block;
+  }
+  @include media-query("large") {
+    font-size: xx-large;
+  }
 }
 
 .dots {
