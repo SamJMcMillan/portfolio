@@ -28,7 +28,12 @@ function validateForm() {
     $(emailPopup).slideDown(400).delay(2000).slideUp(400);
     return false;
   } else {
-    $(emailConfirmed).slideDown(400).delay(2000).slideUp(400);
-    console.log("email entered");
+    console.log("Message sent!");
+    return true;
   }
 }
+
+window.addEventListener("reset", function () {
+  $(emailConfirmed).slideDown(400).delay(2000).slideUp(400);
+  console.log("email entered");
+});
